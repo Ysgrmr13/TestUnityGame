@@ -140,16 +140,4 @@ public class Enemy : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
-    
-    // --- ИЗМЕНЕННАЯ ЧАСТЬ ---
-    private void OnDrawGizmosSelected()
-    {
-        // Рисуем радиус обнаружения (желтый)
-        Handles.color = Color.yellow;
-        Handles.DrawWireDisc(transform.position, Vector3.forward, detectionRange);
-        
-        // Рисуем радиус атаки (красный)
-        Handles.color = Color.red;
-        Handles.DrawWireDisc(transform.position, Vector3.forward, attackRange);
-    }
 }

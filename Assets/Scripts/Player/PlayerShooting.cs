@@ -68,13 +68,4 @@ public class PlayerShooting : MonoBehaviour
         UIManager.Instance?.UpdateAmmoDisplay(ammunition);
     }
     
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        
-        // 2. ИСПРАВЛЕНО: Gizmos.DrawWireCircle заменен на Handles.DrawWireDisc
-        // Этот метод рисует контур диска (круга) в 3D пространстве.
-        // Vector3.forward указывает, что круг должен быть в плоскости XY (идеально для 2D).
-        Handles.DrawWireDisc(transform.position, Vector3.forward, shootRange);
-    }
 }

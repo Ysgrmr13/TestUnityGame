@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dd5348892c0bc94189c4ac714a77fa7, type: 3}
   m_Name: Ammo
   m_EditorClassIdentifier: 
-  itemId: 
-  itemName: 
-  description: 
-  icon: {fileID: 0}
+  itemId: ammo1
+  itemName: "\u041F\u0430\u0442\u0440\u043E\u043D\u044B"
+  description: "\u041F\u0430\u0442\u0440\u043E\u043D\u044B \u0434\u043B\u044F \u041E\u0440\u0443\u0436\u0438\u044F"
+  icon: {fileID: 21300000, guid: d45f0cae013abb84688afe6e4bc52845, type: 3}
   stackable: 1
-  maxStackSize: 99
+  maxStackSize: 90
   itemType: 0

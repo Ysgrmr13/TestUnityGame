@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dd5348892c0bc94189c4ac714a77fa7, type: 3}
   m_Name: Helmet
   m_EditorClassIdentifier: 
-  itemId: 
-  itemName: 
-  description: 
-  icon: {fileID: 0}
-  stackable: 1
-  maxStackSize: 99
-  itemType: 0
+  itemId: helmet1
+  itemName: Helmet
+  description: 123
+  icon: {fileID: 21300000, guid: 1aa8d4e1c6a8e934595f9ab61f2bf8aa, type: 3}
+  stackable: 0
+  maxStackSize: 1
+  itemType: 2
