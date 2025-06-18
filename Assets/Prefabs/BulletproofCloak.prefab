@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5425075430441136731}
   - component: {fileID: 5425075430441136728}
   - component: {fileID: -2866978591659911010}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletproofCloak
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

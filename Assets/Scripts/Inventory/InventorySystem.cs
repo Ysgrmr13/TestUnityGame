@@ -28,7 +28,6 @@ public class InventorySystem : MonoBehaviour
     
     public bool AddItem(Item item, int quantity = 1)
     {
-        // Проверяем, можно ли добавить к существующему стаку
         ItemStack existingStack = items.Find(stack => stack.item.itemId == item.itemId);
         
         if (existingStack != null && item.stackable)
@@ -38,7 +37,7 @@ public class InventorySystem : MonoBehaviour
             return true;
         }
         
-        // Создаем новый стак
+
         if (items.Count < maxSlots)
         {
             items.Add(new ItemStack(item, quantity));
@@ -46,7 +45,7 @@ public class InventorySystem : MonoBehaviour
             return true;
         }
         
-        return false; // Инвентарь полон
+        return false;
     }
     
     public bool RemoveItem(string itemId, int quantity = 1)
@@ -121,7 +120,7 @@ public class InventorySystem : MonoBehaviour
 		{
 			return stack.quantity;
 		}
-		return 0; // Возвращаем 0, если такого предмета нет
+		return 0;
 	}
 }
 

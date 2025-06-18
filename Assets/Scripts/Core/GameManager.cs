@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
@@ -54,17 +54,35 @@ public class GameManager : MonoBehaviour
             enemy.OnDeath += OnEnemyDeath;
         }
     }
-    
-    private Vector3 GetRandomSpawnPosition()
-    {
-        if (enemySpawnPoints.Length > 0)
-        {
-            return enemySpawnPoints[Random.Range(0, enemySpawnPoints.Length)].position;
-        }
-        return new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f), 0);
-    }
-    
-    private void OnEnemyDeath(Enemy enemy)
+
+	private Vector3 GetRandomSpawnPosition()
+	{
+		Vector3 spawnPos;
+		int attempts = 0;
+		bool positionValid = false;
+
+		do
+		{
+			if (enemySpawnPoints.Length > 0)
+			{
+				spawnPos = enemySpawnPoints[Random.Range(0, enemySpawnPoints.Length)].position;
+			}
+			else
+			{
+				spawnPos = new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f), 0);
+			}
+
+			Collider2D[] colliders = Physics2D.OverlapCircleAll(spawnPos, 1f);
+			positionValid = colliders.Length == 0;
+
+			attempts++;
+		}
+		while (!positionValid && attempts < 5);
+
+		return spawnPos;
+	}
+
+	private void OnEnemyDeath(Enemy enemy)
     {
         activeEnemies.Remove(enemy);
         enemy.OnDeath -= OnEnemyDeath;

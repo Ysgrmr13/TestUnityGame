@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 2543089235996772505}
   m_Layer: 8
   m_Name: ItemHelmet
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
